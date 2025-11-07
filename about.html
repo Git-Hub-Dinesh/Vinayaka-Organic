@@ -286,15 +286,15 @@
     <!-- Floating contact buttons & smooth scroll styles -->
     <style>
         html { scroll-behavior: smooth; }
-        @keyframes shakeY { 0% { transform: translateY(0);} 25% { transform: translateY(-6px);} 50% { transform: translateY(0);} 75% { transform: translateY(-3px);} 100% { transform: translateY(0);} }
-    /* Place contact buttons above the Back-to-Top button (align to same right edge)
-       Increase bottom offset so the stack sits fully above the Back-to-Top button. */
-    .contact-fixed { position: fixed; bottom: 5.5rem; right: 2rem; z-index: 80; display: flex; align-items: center; }
-
-    /* Small-screen tweak: reduce offsets so buttons remain visible and non-overlapping */
-    @media (max-width: 640px) {
-        .contact-fixed { bottom: 4rem; right: 0.75rem; }
-    }
+        @keyframes shakeY {
+            0% { transform: translateY(0); }
+            25% { transform: translateY(-6px); }
+            50% { transform: translateY(0); }
+            75% { transform: translateY(-3px); }
+            100% { transform: translateY(0); }
+        }
+    /* Place contact buttons above the Back-to-Top button (align to same right edge) */
+    .contact-fixed { position: fixed; bottom: 4.5rem; right: 1.5rem; z-index: 70; display: flex; align-items: center; }
         .contact-stack { display: flex; flex-direction: column; gap: 10px; }
         .contact-btn { width: 50px; height: 50px; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: transform 200ms; }
         .contact-btn:hover { transform: translateY(-6px); }
@@ -1062,10 +1062,6 @@
     </footer>
     
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg hover:bg-primary-dark transition-all duration-300 opacity-0 pointer-events-none z-50" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
     <!-- Contact Buttons (phone & whatsapp) -->
     <div class="contact-fixed" aria-hidden="false">
         <div class="contact-stack">
@@ -1077,6 +1073,11 @@
             </a>
         </div>
     </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 w-10 h-10 md:w-12 md:h-12 bg-primary text-white rounded-full hidden items-center justify-center hover:bg-primary-dark hover:-translate-y-1 transition-all shadow-lg z-40 mobile-touch-target" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     
     <!-- Custom JS -->
     <script>
@@ -1111,11 +1112,11 @@
         
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
-                backToTop.classList.remove('opacity-0', 'pointer-events-none');
-                backToTop.classList.add('opacity-100');
+                backToTop.classList.remove('hidden');
+                backToTop.classList.add('flex');
             } else {
-                backToTop.classList.add('opacity-0', 'pointer-events-none');
-                backToTop.classList.remove('opacity-100');
+                backToTop.classList.add('hidden');
+                backToTop.classList.remove('flex');
             }
         });
         
