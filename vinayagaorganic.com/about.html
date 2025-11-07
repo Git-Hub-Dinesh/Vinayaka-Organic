@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nattu Sakkarai - Premium Traditional Jaggery Exporter. Pure, Organic, and Natural Jaggery products.">
+    <meta name="keywords" content="jaggery, nattu sakkarai, traditional jaggery, organic jaggery, jaggery exporter">
+    <meta name="author" content="Nattu Sakkarai">
+    
+    <title>About Us - Nattu Sakkarai | Pure Traditional Jaggery</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        'primary-dark': '#654321',
+                        secondary: '#D2691E',
+                        accent: '#FFD700',
+                        cream: '#F5E6D3',
+                        'light-cream': '#FAF3E9',
+                    },
+                    fontFamily: {
+                        'heading': ['Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+        
+        /* Hide scrollbar for mobile menu */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Hero Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        @keyframes floatSlow {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px);
+            }
+            50% {
+                transform: translateY(-30px) translateX(10px);
+            }
+        }
+        
+        @keyframes gradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        @keyframes draw {
+            from {
+                stroke-dasharray: 200;
+                stroke-dashoffset: 200;
+            }
+            to {
+                stroke-dasharray: 200;
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        @keyframes bounceSlow {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        
+        .animate-fade-in-right {
+            animation: fadeInRight 1s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-fade-in-left {
+            animation: fadeInLeft 1s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-float-slow {
+            animation: floatSlow 8s ease-in-out infinite;
+        }
+        
+        .animate-float-delayed {
+            animation: float 6s ease-in-out infinite 2s;
+        }
+        
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+        }
+        
+        .animate-draw {
+            animation: draw 2s ease-out forwards;
+        }
+        
+        .animate-bounce-slow {
+            animation: bounceSlow 2s ease-in-out infinite;
+        }
+        
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+        
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-500 {
+            animation-delay: 0.5s;
+            animation-fill-mode: backwards;
+        }
+        
+        .delay-1000 {
+            animation-delay: 1s;
+        }
+        
+        /* Smooth transitions */
+        * {
+            transition-duration: 300ms;
+        }
+        
+        /* Mobile-specific improvements */
+        @media (max-width: 768px) {
+            /* Adjust font sizes for mobile */
+            .mobile-text-xl {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+            
+            .mobile-text-2xl {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+            
+            .mobile-text-3xl {
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+            }
+            
+            .mobile-text-4xl {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+            }
+            
+            .mobile-text-5xl {
+                font-size: 3rem;
+                line-height: 1;
+            }
+            
+            /* Improve button sizing */
+            .mobile-btn {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+                font-size: 1rem;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            /* Adjust spacing for mobile */
+            .mobile-py-16 {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+            
+            .mobile-py-12 {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+            
+            .mobile-py-8 {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+            
+            /* Improve grid layouts for mobile */
+            .mobile-grid-cols-1 {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Adjust image sizes */
+            .mobile-img-full {
+                width: 100%;
+                height: auto;
+            }
+            
+            /* Improve text alignment */
+            .mobile-text-center {
+                text-align: center;
+            }
+            
+            /* Reduce animation intensity on mobile */
+            .mobile-reduce-animation * {
+                animation-duration: 1.5s !important;
+            }
+            
+            /* Improve touch targets */
+            .mobile-touch-target {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+    </style>
+    
+    <!-- Floating contact buttons & smooth scroll styles -->
+    <style>
+        html { scroll-behavior: smooth; }
+        @keyframes shakeY { 0% { transform: translateY(0);} 25% { transform: translateY(-6px);} 50% { transform: translateY(0);} 75% { transform: translateY(-3px);} 100% { transform: translateY(0);} }
+    /* Place contact buttons above the Back-to-Top button (align to same right edge)
+       Increase bottom offset so the stack sits fully above the Back-to-Top button. */
+    .contact-fixed { position: fixed; bottom: 5.5rem; right: 2rem; z-index: 80; display: flex; align-items: center; }
+
+    /* Small-screen tweak: reduce offsets so buttons remain visible and non-overlapping */
+    @media (max-width: 640px) {
+        .contact-fixed { bottom: 4rem; right: 0.75rem; }
+    }
+        .contact-stack { display: flex; flex-direction: column; gap: 10px; }
+        .contact-btn { width: 50px; height: 50px; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: transform 200ms; }
+        .contact-btn:hover { transform: translateY(-6px); }
+        .contact-phone { background: #0d6efd; }
+        .contact-ws { background: #25D366; }
+        .contact-shake { animation: shakeY 1.6s infinite ease-in-out; }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/Logo-Photoroom.png">
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 w-full bg-cream shadow-lg z-50 transition-transform duration-300" id="navbar">
+        <nav class="container mx-auto px-3 sm:px-4 py-2 sm:py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo and Brand -->
+                <a href="index.html" class="flex items-center space-x-2 sm:space-x-4 group flex-shrink-0">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 md:w-14 md:h-12 flex items-center justify-center transition-transform group-hover:scale-110">
+                        <img src="assets/images/Logo-Photoroom.png" 
+                             alt="Nattu Sakkarai Logo" 
+                             class="w-full h-full object-contain scale-110 sm:scale-125 md:scale-150 drop-shadow-md">
+                    </div>
+                    <div class="min-w-0">
+                        <h1 class="text-lg sm:text-xl md:text-2xl font-bold text-primary font-heading leading-tight truncate">Vinayaga Organic</h1>
+                        <p class="text-xs sm:text-sm md:text-xs text-secondary font-medium truncate">Pure Traditional Jaggery</p>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="about.html" class="text-primary font-bold border-b-2 border-primary">About Us</a>
+                    <a href="products.html" class="text-gray-700 hover:text-primary transition-colors font-medium">Products</a>
+                    <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-all shadow-md hover:shadow-lg">Contact</a>
+                    
+                    <!-- Badge Icons - Desktop Only -->
+                    <div class="flex items-center space-x-3 pl-4 border-l-2 border-gray-200">
+                        <div class="group relative">
+                            <img src="assets/images/Quality.png" alt="Premium Quality" class="w-13 h-13 hover:scale-110 transition-transform cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-10">
+                                Premium Quality
+                            </div>
+                        </div>
+                        <div class="group relative">
+                            <img src="assets/images/Sat.png" alt="100% Satisfaction" class="w-13 h-13 hover:scale-110 transition-transform cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-10">
+                                100% Satisfaction
+                            </div>
+                        </div>
+                        <div class="group relative">
+                            <img src="assets/images/FoodS.png" alt="Food Safety" class="w-13 h-13 hover:scale-110 transition-transform cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-10">
+                                Food Safety Certified
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-primary focus:outline-none flex-shrink-0">
+                    <i class="fas fa-bars text-xl sm:text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+                <a href="index.html" class="block py-3 px-4 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-all mb-2">Home</a>
+                <a href="about.html" class="block py-3 px-4 text-primary font-bold bg-primary/5 rounded-lg mb-2">About Us</a>
+                <a href="products.html" class="block py-3 px-4 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-all mb-2">Products</a>
+                <a href="contact.html" class="block py-3 px-4 bg-primary text-white rounded-lg hover:bg-primary-dark transition-all text-center font-medium">Contact</a>
+                
+                <!-- Badge Icons - Mobile -->
+                <div class="flex items-center justify-center space-x-4 mt-6 pt-4 border-t border-gray-200">
+                    <div class="text-center">
+                        <img src="assets/images/Quality.png" alt="Premium Quality" class="w-12 h-12 mx-auto mb-1">
+                        <p class="text-xs text-gray-600">Quality</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/images/Sat.png" alt="100% Satisfaction" class="w-12 h-12 mx-auto mb-1">
+                        <p class="text-xs text-gray-600">Satisfaction</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/images/FoodS.png" alt="Food Safety" class="w-12 h-12 mx-auto mb-1">
+                        <p class="text-xs text-gray-600">Safety</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Spacer for fixed header -->
+    <div class="h-16 md:h-20"></div>
+    
+    <!-- Page Header -->
+    <section class="relative overflow-hidden min-h-[80vh] flex items-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0">
+            <img src="assets/images/SugarCane.jpeg" alt="Our Story Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-primary/70"></div>
+        </div>
+        
+        <!-- Animated Patterns -->
+        <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(210, 105, 30, 0.1) 0%, transparent 50%);"></div>
+        
+        <!-- Floating Particles -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute rounded-full top-1/4 left-1/4 w-2 h-2 bg-accent/40 animate-float"></div>
+            <div class="absolute rounded-full top-1/3 right-1/3 w-3 h-3 bg-accent/30 animate-float" style="animation-duration: 8s; animation-delay: 1s;"></div>
+            <div class="absolute rounded-full bottom-1/4 left-1/3 w-2 h-2 bg-secondary/40 animate-float" style="animation-duration: 6s; animation-delay: 2s;"></div>
+            <div class="absolute rounded-full top-2/3 right-1/4 w-2 h-2 bg-accent/50 animate-float" style="animation-duration: 7s; animation-delay: 0.5s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex justify-center">
+                <div class="max-w-5xl text-center w-full">
+                    
+                    
+                    <!-- Main Heading with Animation -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-snug animate-fade-in-up delay-200" style="text-shadow: 2px 4px 8px rgba(0,0,0,0.3);">
+                        Our Journey Begins in the<br>
+                        <span class="inline-block relative">
+                            <span class="bg-gradient-to-r from-accent via-orange-500 to-accent bg-[length:200%_auto] bg-clip-text text-transparent" style="animation: shimmer 3s linear infinite;">
+                                Fields of Tamil Nadu
+                            </span>
+                            <svg class="absolute left-0 w-full" style="bottom: -6px; height: 14px;" viewBox="0 0 300 12" fill="none">
+                                <path d="M2 10C100 5, 200 5, 298 10" stroke="#FFD700" stroke-width="3" stroke-linecap="round" class="animate-draw" style="animation-delay: 0.8s;"/>
+                            </svg>
+                        </span>
+                    </h1>
+                    
+                    <!-- Subtitle with Animation -->
+                    <p class="text-white text-xl md:text-2xl mb-8 mx-auto max-w-3xl animate-fade-in-up delay-400" style="text-shadow: 1px 2px 4px rgba(0,0,0,0.3);">
+                        Where tradition meets purity, and every batch tells a story
+                    </p>  
+                    
+                    <!-- Breadcrumb with Animation -->
+                    <nav aria-label="breadcrumb" class="mt-8 opacity-0" style="animation: fadeIn 1s ease-out 0.8s both;">
+                        <ol class="inline-flex items-center bg-white/10 backdrop-blur-md px-4 py-2 rounded-full space-x-2">
+                            <li class="flex items-center">
+                                <a href="index.html" class="text-accent hover:text-yellow-300 transition-colors">Home</a>
+                            </li>
+                            <li class="text-white/60">/</li>
+                            <li class="text-white">About Us</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Animation Styles -->
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes ping {
+            75%, 100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        @keyframes draw {
+            from {
+                stroke-dasharray: 300;
+                stroke-dashoffset: 300;
+            }
+            to {
+                stroke-dasharray: 300;
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+    </style>
+    
+    <!-- Our Story Section -->
+    <section class="relative overflow-hidden py-20 md:py-28">       
+        <div class="container mx-auto px-4 relative">
+            
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Left: Content with Stagger Animations -->
+                <div class="mb-8 lg:mb-0">
+                    <!-- Main Heading -->
+                    <div class="animate-fade-in-up delay-200">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight text-primary">
+                            Our Story
+                            <span class="block relative mt-2">
+                                <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                                    A Legacy of Pure Tradition
+                                </span>
+                                <svg class="absolute left-10 w-full -bottom-2 h-5" viewBox="0 0 500 5" fill="none">
+                                    <path d="M2 8C50 4, 100 4, 198 8" stroke="#FFD700" stroke-width="2" stroke-linecap="round" class="animate-draw delay-500"/>
+                                </svg>
+                            </span>
+                        </h2>
+                    </div>
+                    
+                    <!-- Description Paragraphs with Stagger -->
+                    <div class="animate-fade-in-up delay-400">
+                        <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+                            Vinayaga Exports was founded with a simple mission: to preserve the 
+                            <span class="font-bold text-primary">traditional art of jaggery making</span> 
+                            and bring pure, natural sweetness to every household. For generations, our family has been perfecting the craft of producing the finest quality jaggery.
+                        </p>
+                    </div>
+                    
+                    <div class="animate-fade-in-up delay-[600ms]">
+                        <p class="mb-4 text-gray-600 leading-relaxed">
+                            What started as a small family business has now grown into a 
+                            <span class="font-bold text-secondary">trusted name in Vinayaga jaggery Exports</span>. 
+                            Our commitment to quality, authenticity, and customer satisfaction has helped us build lasting relationships with clients worldwide.
+                        </p>
+                    </div>
+                    
+                    <div class="animate-fade-in-up delay-[800ms]">
+                        <div class="p-4 rounded-3xl relative overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5 border-l-4 border-accent">
+                            <p class="mb-0 italic text-primary text-lg leading-relaxed">
+                                "Every block of jaggery we produce carries the essence of tradition, the warmth of nature, and the promise of purity."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="mt-8 animate-fade-in-up delay-[1200ms]">
+                        <a href="contact.html" class="inline-block relative overflow-hidden px-8 py-4 rounded-full bg-gradient-to-r from-primary to-primary-dark text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <span class="relative z-10">
+                                Learn More About Us
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right: Image with 3D Effects -->
+                <div class="w-full">
+                    <div class="relative animate-fade-in-right delay-400">
+                        <!-- Decorative Elements -->
+                        <div class="absolute rounded-full -top-8 -left-8 w-32 h-32 bg-accent/20 blur-3xl z-0"></div>
+                        <div class="absolute rounded-full -bottom-8 -right-8 w-40 h-40 bg-primary/15 blur-3xl z-0"></div>
+                        
+                        <!-- Main Image Container -->
+                        <div class="relative z-10">
+                            <div class="rounded-3xl overflow-hidden relative shadow-2xl transition-all duration-500 hover:scale-105 hover:rotate-1 group">
+                                <img src="assets/images/Harvesting.jpg" alt="Our Story" class="w-full block transition-transform duration-700 group-hover:scale-110">
+                                
+                                <!-- Gradient Overlay -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            </div>
+                            
+                            <!-- Floating Badge -->
+                            <div class="absolute bottom-8 right-8 rounded-2xl p-3 flex items-center gap-3 bg-white/95 backdrop-blur-md shadow-xl animate-float">
+                                <div class="rounded-full flex items-center justify-center w-12 h-12 bg-accent/20">
+                                    <i class="fas fa-award text-2xl text-accent"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-primary text-sm">ISO Certified</div>
+                                    <div class="text-xs text-gray-500">Export Quality</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Corner Accent Pattern -->
+                        <div class="absolute -top-4 -right-4 w-20 h-20 border-3 border-accent rounded-2xl rotate-45 opacity-0 transition-all duration-500 hover:opacity-100 hover:rotate-90"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+    
+    <!-- Mission & Vision Section -->
+    <section class="relative overflow-hidden py-20 md:py-28 bg-gradient-to-br from-[#dbac69] via-white to-[#e6d5be]">
+        <!-- Background Decorations -->
+        
+        <div class="container mx-auto px-4 relative">
+            <!-- Section Header -->
+            <div class="text-center mb-12 md:mb-16 animate-fade-in-up">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary">Our Mission & Vision</h2>
+                <p class="text-lg md:text-xl text-gray-600 mx-auto max-w-3xl">Guiding principles that drive our commitment to excellence</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Mission Card -->
+                <div class="animate-fade-in-left" style="animation-delay: 0.3s;">
+                    <div class="relative h-full">
+                        <div class="h-full relative overflow-hidden rounded-3xl backdrop-blur-md shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);">
+                            <!-- Decorative Corner -->
+                            <div class="absolute top-0 right-0 w-40 h-40 opacity-25" style="background: radial-gradient(circle at top right, #dfc58e 0%, transparent 70%);"></div>
+                            
+                            <div class="p-8 lg:p-10 relative">
+                                <!-- Icon Container -->
+                                <div class="flex items-center justify-center mb-6 w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-2xl shadow-lg transition-all duration-400 hover:rotate-12 hover:scale-110">
+                                    <i class="fas fa-bullseye text-4xl text-white"></i>
+                                </div>
+                                
+                                <h3 class="font-bold mb-4 text-primary text-3xl">Our Mission</h3>
+                                <p class="mb-4 text-gray-600 leading-relaxed text-lg">
+                                    To provide the <span class="font-bold text-primary">purest and most authentic traditional jaggery</span> to the world, while preserving age-old production methods and supporting local farmers. We strive to be the bridge between traditional sweetness and modern health consciousness.
+                                </p>
+                                
+                                <!-- Key Points -->
+                                <div class="mt-6 space-y-3">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg">
+                                                <i class="fas fa-check text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="mb-0 text-sm text-gray-600">Preserve traditional methods</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg">
+                                                <i class="fas fa-check text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="mb-0 text-sm text-gray-600">Support local farming communities</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg">
+                                                <i class="fas fa-check text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="mb-0 text-sm text-gray-600">Deliver authentic natural sweetness</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Bottom Accent -->
+                            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-primary"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vision Card -->
+                <div class="animate-fade-in-right" style="animation-delay: 0.3s;">
+                    <div class="relative h-full">
+                        <div class="h-full relative overflow-hidden rounded-3xl backdrop-blur-md shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl bg-gradient-to-br from-primary/5 to-accent/5">
+                            <!-- Decorative Corner -->
+                            <div class="absolute top-0 left-0 w-40 h-40 opacity-25" style="background: radial-gradient(circle at top left, #d4b986 0%, transparent 70%);"></div>
+                            
+                            <div class="p-8 lg:p-10 relative">
+                                <!-- Icon Container -->
+                                <div class="flex items-center justify-center mb-6 w-20 h-20 bg-gradient-to-br from-accent to-orange-500 rounded-2xl shadow-lg transition-all duration-400 hover:-rotate-12 hover:scale-110">
+                                    <i class="fas fa-eye text-4xl text-white"></i>
+                                </div>
+                                
+                                <h3 class="font-bold mb-4 text-primary text-3xl">Our Vision</h3>
+                                <p class="mb-4 text-gray-600 leading-relaxed text-lg">
+                                    To become the <span class="font-bold text-primary">world's most trusted name</span> in traditional jaggery export, promoting healthy living through natural sweeteners, and creating a sustainable ecosystem that benefits farmers, customers, and the environment alike.
+                                </p>
+                                
+                                <!-- Key Points -->
+                                <div class="mt-6 space-y-3">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center w-8 h-8 bg-accent/20 rounded-lg">
+                                                <i class="fas fa-star text-accent"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="mb-0 text-sm text-gray-600">Global leader in jaggery export</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center w-8 h-8 bg-accent/20 rounded-lg">
+                                                <i class="fas fa-star text-accent"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="mb-0 text-sm text-gray-600">Promote healthy natural alternatives</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center w-8 h-8 bg-accent/20 rounded-lg">
+                                                <i class="fas fa-star text-accent"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="mb-0 text-sm text-gray-600">Build sustainable ecosystems</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Bottom Accent -->
+                            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Traditional Jaggery-Making Process Section 
+    <section class="relative overflow-hidden py-20 md:py-28 bg-gradient-to-b from-white to-light-cream">
+        Background Decorations
+        <div class="absolute top-0 left-0 w-80 h-80 opacity-5 blur-3xl" style="background: radial-gradient(circle, #e6deda 0%, transparent 70%);"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 opacity-5 blur-3xl" style="background: radial-gradient(circle, #dfd597 0%, transparent 70%);"></div>
+        
+        <div class="container mx-auto px-4 relative">
+            Section Header
+            <div class="text-center mb-12 md:mb-16 animate-fade-in-up">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary">Traditional Jaggery-Making Process</h2>
+                <p class="text-lg md:text-xl text-gray-600 mx-auto max-w-3xl">From farm to your table, each step is crafted with precision and tradition</p>
+            </div>
+            
+            Vertical Process Steps
+            <div class="relative max-w-5xl mx-auto">
+                Vertical Connecting Line
+                <div class="absolute left-1/2 -translate-x-1/2 top-24 bottom-24 w-1 bg-gradient-to-b from-accent via-primary to-accent opacity-30 z-0 hidden lg:block"></div>
+                
+                Step 1: Sugarcane Harvesting
+                <div class="grid lg:grid-cols-2 gap-8 items-center mb-12 lg:mb-20 relative">
+                    <div class="lg:order-1">
+                        <div class="relative rounded-3xl overflow-hidden shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
+                            <img src="assets/images/Harvesting.jpg" alt="Sugarcane Harvesting" class="w-full transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent"></div>
+                        </div>
+                    </div>
+                    <div class="lg:order-2">
+                        <div class="relative p-4 lg:p-6">
+                            Step Number Badge
+                            <div class="absolute left-0 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center rounded-full font-bold w-9 h-9 bg-gradient-to-br from-accent to-orange-500 text-white text-2xl shadow-xl z-10 -left-9">
+                                1
+                            </div>
+                            
+                            <div class="lg:ml-12">
+                                <span class="inline-block bg-primary text-white px-4 py-2 rounded-full mb-3 text-sm">Step 1</span>
+                                <h3 class="font-bold mb-3 text-primary text-2xl lg:text-3xl">Sugarcane Harvesting</h3>
+                                <p class="text-gray-600 mb-3 leading-relaxed">Fresh sugarcane is carefully harvested from our organic farms at the perfect ripeness, ensuring maximum natural sweetness and nutritional value.</p>
+                                <div class="flex items-center text-primary">
+                                    <i class="fas fa-check-circle mr-2"></i>
+                                    <span class="text-sm">100% Organic Farms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                Step 2: Juice Extraction
+                <div class="grid lg:grid-cols-2 gap-8 items-center mb-12 lg:mb-20 relative">
+                    <div class="lg:order-2">
+                        <div class="relative rounded-3xl overflow-hidden shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
+                            <img src="assets/images/Juice extraction.jpg" alt="Juice Extraction" class="w-full transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-bl from-transparent via-transparent to-primary/30"></div>
+                        </div>
+                    </div>
+                    <div class="lg:order-1">
+                        <div class="relative p-4 lg:p-6 lg:text-right">
+                            Step Number Badge
+                            <div class="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center rounded-full font-bold w-9 h-9 bg-gradient-to-br from-accent to-orange-500 text-white text-2xl shadow-xl z-10 -right-9">
+                                2
+                            </div>
+                            
+                            <div class="lg:mr-12">
+                                <span class="inline-block bg-primary text-white px-4 py-2 rounded-full mb-3 text-sm">Step 2</span>
+                                <h3 class="font-bold mb-3 text-primary text-2xl lg:text-3xl">Juice Extraction</h3>
+                                <p class="text-gray-600 mb-3 leading-relaxed">Using traditional crushing methods, we extract pure sugarcane juice without any chemical additives, preserving all natural minerals and vitamins.</p>
+                                <div class="flex items-center text-primary lg:justify-end">
+                                    <i class="fas fa-check-circle mr-2"></i>
+                                    <span class="text-sm">Chemical-Free Process</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                Step 3: Traditional Boiling
+                <div class="grid lg:grid-cols-2 gap-8 items-center mb-12 lg:mb-20 relative">
+                    <div class="lg:order-1">
+                        <div class="relative rounded-3xl overflow-hidden shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
+                            <img src="assets/images/Gemini_Generated_Image_fptzflfptzflfptz.png" alt="Traditional Boiling" class="w-full transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent"></div>
+                        </div>
+                    </div>
+                    <div class="lg:order-2">
+                        <div class="relative p-4 lg:p-6">
+                            Step Number Badge
+                            <div class="absolute left-0 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center rounded-full font-bold w-9 h-9 bg-gradient-to-br from-accent to-orange-500 text-white text-2xl shadow-xl z-10 -left-9">
+                                3
+                            </div>
+                            
+                            <div class="lg:ml-12">
+                                <span class="inline-block bg-primary text-white px-4 py-2 rounded-full mb-3 text-sm">Step 3</span>
+                                <h3 class="font-bold mb-3 text-primary text-2xl lg:text-3xl">Traditional Boiling</h3>
+                                <p class="text-gray-600 mb-3 leading-relaxed">The juice is slow-cooked in large traditional pots over controlled heat, allowing natural crystallization while maintaining the authentic flavor and aroma.</p>
+                                <div class="flex items-center text-primary">
+                                    <i class="fas fa-check-circle mr-2"></i>
+                                    <span class="text-sm">Time-Tested Methods</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                Step 4: Cooling & Solidifying
+                <div class="grid lg:grid-cols-2 gap-8 items-center mb-12 lg:mb-20 relative">
+                    <div class="lg:order-2">
+                        <div class="relative rounded-3xl overflow-hidden shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
+                            <img src="assets/images/about-preview.jpg" alt="Cooling & Solidifying" class="w-full transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-bl from-transparent via-transparent to-primary/30"></div>
+                        </div>
+                    </div>
+                    <div class="lg:order-1">
+                        <div class="relative p-4 lg:p-6 lg:text-right">
+                            Step Number Badge
+                            <div class="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center rounded-full font-bold w-9 h-9 bg-gradient-to-br from-accent to-orange-500 text-white text-2xl shadow-xl z-10 -right-9">
+                                4
+                            </div>
+                            
+                            <div class="lg:mr-12">
+                                <span class="inline-block bg-primary text-white px-4 py-2 rounded-full mb-3 text-sm">Step 4</span>
+                                <h3 class="font-bold mb-3 text-primary text-2xl lg:text-3xl">Cooling & Solidifying</h3>
+                                <p class="text-gray-600 mb-3 leading-relaxed">The concentrated mixture is poured into molds and allowed to cool naturally, forming solid blocks of pure jaggery with perfect consistency and texture.</p>
+                                <div class="flex items-center text-primary lg:justify-end">
+                                    <i class="fas fa-check-circle mr-2"></i>
+                                    <span class="text-sm">Natural Cooling Process</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                Step 5: Packaging & Delivery
+                <div class="grid lg:grid-cols-2 gap-8 items-center relative">
+                    <div class="lg:order-1">
+                        <div class="relative rounded-3xl overflow-hidden shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
+                            <img src="assets/images/Package.jpg" alt="Packaging & Delivery" class="w-full transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent"></div>
+                        </div>
+                    </div>
+                    <div class="lg:order-2">
+                        <div class="relative p-4 lg:p-6">
+                            Step Number Badge
+                            <div class="absolute left-0 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center rounded-full font-bold w-9 h-9 bg-gradient-to-br from-accent to-orange-500 text-white text-2xl shadow-xl z-10 -left-9">
+                                5
+                            </div>
+                            
+                            <div class="lg:ml-12">
+                                <span class="inline-block bg-primary text-white px-4 py-2 rounded-full mb-3 text-sm">Step 5</span>
+                                <h3 class="font-bold mb-3 text-primary text-2xl lg:text-3xl">Packaging & Delivery</h3>
+                                <p class="text-gray-600 mb-3 leading-relaxed">Each block is carefully inspected, hygienically packaged, and prepared for delivery to ensure it reaches you fresh with all its natural goodness intact.</p>
+                                <div class="flex items-center text-primary">
+                                    <i class="fas fa-check-circle mr-2"></i>
+                                    <span class="text-sm">Hygienic Packaging Standards</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  -->
+    
+    <!-- Our Values Section -->
+    <section class="py-16 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16 animate-fade-in-up">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary">Our Core Values</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div>
+                    <div class="text-center p-6 rounded-2xl bg-white shadow-lg transition-all duration-400 cursor-pointer hover:-translate-y-3 hover:scale-105 hover:shadow-2xl opacity-0" style="animation: fadeInUp 0.8s ease-out 0.2s both;">
+                        <div class="mb-4 transition-all duration-400 hover:scale-125 hover:rotate-12">
+                            <i class="fas fa-certificate text-5xl text-primary"></i>
+                        </div>
+                        <h5 class="font-bold text-xl mb-3 text-gray-800">Quality First</h5>
+                        <p class="text-gray-600">We never compromise on the quality of our products. Every batch is carefully tested.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="text-center p-6 rounded-2xl bg-white shadow-lg transition-all duration-400 cursor-pointer hover:-translate-y-3 hover:scale-105 hover:shadow-2xl opacity-0" style="animation: fadeInUp 0.8s ease-out 0.4s both;">
+                        <div class="mb-4 transition-all duration-400 hover:scale-125 hover:rotate-12">
+                            <i class="fas fa-leaf text-5xl text-primary"></i>
+                        </div>
+                        <h5 class="font-bold text-xl mb-3 text-gray-800">100% Natural</h5>
+                        <p class="text-gray-600">No chemicals, no preservatives - just pure, natural jaggery as nature intended.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="text-center p-6 rounded-2xl bg-white shadow-lg transition-all duration-400 cursor-pointer hover:-translate-y-3 hover:scale-105 hover:shadow-2xl opacity-0" style="animation: fadeInUp 0.8s ease-out 0.6s both;">
+                        <div class="mb-4 transition-all duration-400 hover:scale-125 hover:rotate-12">
+                            <i class="fas fa-handshake text-5xl text-primary"></i>
+                        </div>
+                        <h5 class="font-bold text-xl mb-3 text-gray-800">Trust & Integrity</h5>
+                        <p class="text-gray-600">Building lasting relationships through transparency and honest business practices.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="text-center p-6 rounded-2xl bg-white shadow-lg transition-all duration-400 cursor-pointer hover:-translate-y-3 hover:scale-105 hover:shadow-2xl opacity-0" style="animation: fadeInUp 0.8s ease-out 0.8s both;">
+                        <div class="mb-4 transition-all duration-400 hover:scale-125 hover:rotate-12">
+                            <i class="fas fa-seedling text-5xl text-primary"></i>
+                        </div>
+                        <h5 class="font-bold text-xl mb-3 text-gray-800">Sustainability</h5>
+                        <p class="text-gray-600">Committed to eco-friendly practices and supporting local farming communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="text-white text-center py-16 md:py-20 bg-gradient-to-br from-primary to-primary-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Want to Partner With Us?</h2>
+            <p class="text-xl md:text-2xl mb-8">Let's work together to bring pure jaggery to the world</p>
+            <a href="contact.html" class="inline-block bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-xl">Contact Us Today</a>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 mobile-py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid mobile-grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
+                <!-- Company Info -->
+                <div>
+                    <h4 class="text-accent mobile-text-xl md:text-2xl font-bold mb-3">Vinayaga Organic</h4>
+                    <p class="text-gray-400 mb-4">Pure Traditional Jaggery</p>
+                    <p class="mb-4 text-sm md:text-base">We are dedicated to bringing you the finest quality traditional jaggery, made using age-old methods that preserve the natural goodness and authentic taste.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent hover:text-gray-900 transition-all mobile-touch-target">
+                            <i class="fab fa-facebook-f text-sm md:text-base"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent hover:text-gray-900 transition-all mobile-touch-target">
+                            <i class="fab fa-instagram text-sm md:text-base"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent hover:text-gray-900 transition-all mobile-touch-target">
+                            <i class="fab fa-twitter text-sm md:text-base"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent hover:text-gray-900 transition-all mobile-touch-target">
+                            <i class="fab fa-linkedin-in text-sm md:text-base"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="text-accent mobile-text-lg md:text-lg font-bold mb-3">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent transition-colors text-sm md:text-base">Home</a></li>
+                        <li><a href="about.html" class="hover:text-accent transition-colors text-sm md:text-base">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-accent transition-colors text-sm md:text-base">Products</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition-colors text-sm md:text-base">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Products -->
+                <div>
+                    <h5 class="text-accent mobile-text-lg md:text-lg font-bold mb-3">Our Products</h5>
+                    <ul class="space-y-2">
+                        <li><a href="products.html#jaggery-powder" class="hover:text-accent transition-colors text-sm md:text-base">Jaggery Powder</a></li>
+                        <li><a href="products.html#jaggery-cubes" class="hover:text-accent transition-colors text-sm md:text-base">Jaggery Cubes</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h5 class="text-accent mobile-text-lg md:text-lg font-bold mb-3">Contact Us</h5>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-map-marker-alt text-accent mt-1 text-sm md:text-base"></i>
+                            <span class="text-sm md:text-base">Sivakasi </span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-accent text-sm md:text-base"></i>
+                            <a href="tel:+919150402470" class="hover:text-accent transition-colors text-sm md:text-base">+91 91504 02470</a>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-accent text-sm md:text-base"></i>
+                            <a href="mailto:ganeshexport95@gmail.com " class="hover:text-accent transition-colors text-sm md:text-base">ganeshexport95@gmail.com </a>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-clock text-accent text-sm md:text-base"></i>
+                            <span class="text-sm md:text-base">Mon - Sat: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-4 md:pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm md:text-base mb-4 md:mb-0 text-center md:text-left">&copy; 2025 Vinayaga Organic. All Rights Reserved.</p>
+                <div class="flex space-x-4 md:space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-accent transition-colors text-sm md:text-base">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-accent transition-colors text-sm md:text-base">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-accent transition-colors text-sm md:text-base">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg hover:bg-primary-dark transition-all duration-300 opacity-0 pointer-events-none z-50" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- Contact Buttons (phone & whatsapp) -->
+    <div class="contact-fixed" aria-hidden="false">
+        <div class="contact-stack">
+            <a href="tel:+919150402470" class="contact-btn contact-phone contact-shake" aria-label="Call us"> 
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://wa.me/9150402470" target="_blank" rel="noopener" class="contact-btn contact-ws contact-shake" aria-label="WhatsApp"> 
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Custom JS -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Navbar Hide/Show on Scroll
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+        
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
+                backToTop.classList.add('opacity-100');
+            } else {
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
+                backToTop.classList.remove('opacity-100');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth Scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
